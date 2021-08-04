@@ -116,3 +116,15 @@ def sum_rec(nums)
   return 0 if nums.empty?
   nums[0] + sum_rec(nums.drop(1))
 end
+
+def fibs(num)
+  return [] if num == 0
+  return [0] if num == 1
+
+  fibs = [0, 1]
+  while fibs.count < num
+    fibs << fibs[-1] + fibs[-2]
+  end
+
+  fibs
+end
